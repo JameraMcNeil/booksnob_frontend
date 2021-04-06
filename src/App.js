@@ -1,4 +1,5 @@
 import React, { Component } from 'react' 
+import NewForm from './components/NewForm'
 
 let baseURL = ''
 
@@ -16,8 +17,6 @@ class App extends Component {
     };
     this.getBooks = this.getBooks.bind(this);
     this.handleAddBooks = this.handleAddBooks.bind(this);
-    this.handleChange = this.handleChange(this);
-    this.handleSubmit = this.handleSubmit(this);
   }
 
   componentDidMount() {
@@ -40,34 +39,7 @@ class App extends Component {
       books: copyBooks
     })
   }
-
-  handleChange(event) {
-    console.log(event.target.value)
-    this.setState({ [event.target.id]: event.target.value})
-  }
-
-  handleSubmit(event) {
-    event.preventDefault()
-    console.log(event)
-
-    fetch(baseURL + '/books/' + book._id, {
-      method: 'PUT',
-      body: JSON.stringify({
-        img: '',
-        description: ''
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then(res => res.json())
-      .then(resJson => {
-        const copyBooks = [...this.state.books]
-        const findIndex = this.state.books.findIndex(book => 
-          book._id === resJson._id)
-          copyBooks [findIndex] = resJson
-          this.setState({books: copyBooks})
-      })
-  }
+  
 
   render() {
     return (
@@ -78,13 +50,7 @@ class App extends Component {
         </header>
       <br/>
 
-      <form onSubmit = { this.handleSubmit }>
-        <input type = 'text' name = 'img' id = 'img' onChange = {this.handleChange} placeholder = 'Add image' value = {this.state.img} />
-        <label htmlFor = 'img'> Book Cover Image</label>
-        <input type ='text' name = 'description' id = 'description' onChange = { this.handleChange } placeholder = 'Add description' value = { this. state. description } />
-        <label htmlFor = 'description'>Description</label>
-        <input type = 'submit' value = 'Add Book' />
-      </form>
+      <NewForm />
   
         <br/>
         <h2>Book Recommendations</h2>
