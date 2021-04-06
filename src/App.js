@@ -1,6 +1,7 @@
 import React, { Component } from 'react' 
 import NewForm from './components/NewForm'
 import BooktubeList from './components/BooktubeList'
+import NYTbooks from './components/NYTbooks'
 
 let baseURL = ''
 
@@ -86,6 +87,8 @@ class App extends Component {
             })
           }
         </ul>
+        <br/>
+        <NYTbooks />
 
       </div>
     )
