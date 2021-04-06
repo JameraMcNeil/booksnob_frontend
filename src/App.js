@@ -17,6 +17,7 @@ class App extends Component {
     };
     this.getBooks = this.getBooks.bind(this);
     this.handleAddBooks = this.handleAddBooks.bind(this);
+    
   }
 
   componentDidMount() {
@@ -39,7 +40,7 @@ class App extends Component {
       books: copyBooks
     })
   }
-  
+
 
   render() {
     return (
@@ -50,14 +51,14 @@ class App extends Component {
         </header>
       <br/>
 
-      <NewForm />
+      <NewForm handleAddBooks = {this.handleAddBooks}/>
   
         <br/>
         <h2>Book Recommendations</h2>
         <ul>
           {
             this.state.books.map((book, key) => {
-              return <li key = {key}> { book.img } | { book.description }</li>
+              return <li key = {key}> | { book.img } alt = 'book covers' | { book.description } </li>
             })
           }
         </ul>
