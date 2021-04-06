@@ -1,5 +1,6 @@
 import React, { Component } from 'react' 
 import NewForm from './components/NewForm'
+import BooktubeList from './components/BooktubeList'
 
 let baseURL = ''
 
@@ -66,6 +67,10 @@ class App extends Component {
 
       <NewForm handleAddBooks = {this.handleAddBooks}/>
   
+        <br/>
+        <aside>
+          <BooktubeList />
+        </aside>
         <br/>
         <h2>Book Recommendations</h2>
         <ul>
