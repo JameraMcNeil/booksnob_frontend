@@ -41,6 +41,19 @@ class App extends Component {
     })
   }
 
+  deleteBook(id) {
+    console.log('deleting a book')
+
+    fetch(baseURL + '/books/' + id, {
+      method: 'DELETE'
+    }).then(res => {
+      const findIndex = this.state.books.findIndex(book =>
+        book._id === id)
+        const copyBooks = [...this.state.books]
+        copyBooks.splice(findIndex, 1)
+        this.setState({books: copyBooks})
+    });
+  };
 
   render() {
     return (
@@ -59,8 +72,11 @@ class App extends Component {
           {
             this.state.books.map((book, key) => {
               return <li key = {key}> 
-              <img src = { book.img } alt = 'book covers'></img> | 
+              <img src = { book.img } alt = 'book covers'></img> <br/> 
               { book.description } 
+              <br/>
+              <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
+              <br/>
               </li>
             })
           }
