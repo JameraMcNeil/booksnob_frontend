@@ -58,7 +58,10 @@ class App extends Component {
         <ul>
           {
             this.state.books.map((book, key) => {
-              return <li key = {key}> | { book.img } alt = 'book covers' | { book.description } </li>
+              return <li key = {key}> 
+              <img src = { book.img } alt = 'book covers'></img> | 
+              { book.description } 
+              </li>
             })
           }
         </ul>
