@@ -14,7 +14,7 @@ class NYTbooks extends Component {
     }
 
     getBestsellers() {
-        fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=E4AJaWOryaXws37hUao2cpU1uTCjjRU6')
+        fetch('https://cryptic-lake-32777.herokuapp.com/books/bestsellers')
         .then(res => {
             return res.json()},
             err => console.log(err))
