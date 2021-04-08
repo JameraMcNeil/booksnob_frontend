@@ -14,7 +14,7 @@ class NYTbooks extends Component {
     }
 
     getBestsellers() {
-        fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_BOOKS_API_KEY}`)
+        fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=E4AJaWOryaXws37hUao2cpU1uTCjjRU6')
         .then(res => {
             return res.json()},
             err => console.log(err))
