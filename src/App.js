@@ -73,20 +73,31 @@ class App extends Component {
         </aside>
         <br/>
         <section>
-          <h2>Book Recommendations</h2>
-          <ul>
-            {
-              this.state.books.map((book, key) => {
-                return <li key = {key}> 
-                <img src = { book.img } alt = 'book covers'></img> <br/> 
-                { book.description } 
-                <br/>
-                <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
-                <br/>
-                </li>
-              })
-            }
-          </ul>
+          <div>
+            <div>
+              <h2 className = 'title is-4'>Book Recommendations</h2>
+            </div>
+            <div className = 'columns is-multi-line'>
+              <div className = 'column is-one-third'>
+                <ul>
+                  {
+                    this.state.books.map((book, key) => {
+                      return <li key = {key}> 
+                      <img src = { book.img } alt = 'book covers'></img> <br/> 
+                      { book.description } 
+                      <br/>
+                      <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
+                      <br/>
+                      </li>
+                    })
+                  }
+                </ul>
+              </div>
+              
+            </div>
+            
+          </div>
+          
         </section>
         <br/>
         <NYTbooks />
