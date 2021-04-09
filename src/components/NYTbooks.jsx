@@ -29,9 +29,10 @@ class NYTbooks extends Component {
         return(
             <div>
                 <section>
-                    <div className = 'title is-4'>
-                        <h2>New York Times Bestsellers List</h2>
+                    <div>
+                        <h2 className = 'title is-4'>New York Times Bestsellers List</h2>
                     </div>
+                    <br/>
                     <div className = 'columns is-multiline'>
                         {
                             this.state.books.map((book, key) => {
