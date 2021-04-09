@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import NewForm from './components/NewForm'
 import BooktubeList from './components/BooktubeList'
 import NYTbooks from './components/NYTbooks'
+import Header from './components/Header'
 
 let baseURL = ''
 
@@ -61,9 +62,7 @@ class App extends Component {
     return (
       <div>
       
-        <header>
-          <h1>Booksnob</h1>
-        </header>
+      <Header />
       <br/>
 
       <NewForm handleAddBooks = {this.handleAddBooks}/>
