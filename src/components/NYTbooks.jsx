@@ -28,19 +28,30 @@ class NYTbooks extends Component {
         // console.log(process.env.REACT_APP_BOOKS_API_KEY)
         return(
             <div>
-                <h2>New York Times Bestsellers List</h2>
-            {/* <button onClick={this.getBestsellers}>TAP</button> */}
-
-            <ul>
-                {
-                    this.state.books.map((book,key) => {
-                        return <li key = {key}>
-                            <img src = {book.book_image} alt = {book.title}></img> <br/>
-                            { book.description }
-                        </li>
-                    })
-                }
-            </ul>
+                <section>
+                    <div className = 'title is-4'>
+                        <h2>New York Times Bestsellers List</h2>
+                    </div>
+                    <div className = 'columns is-multiline'>
+                        {
+                            this.state.books.map((book, key) => {
+                                return (
+                                    <div key = {key} className = 'column is-one-third'>
+                                        <figure>
+                                            <img src = { book.book_image} alt = {book.title}></img>
+                                        </figure>
+                                        <br/>
+                                        <div>
+                                            <p className = 'subtitle'>
+                                                { book.description }
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </section>
             </div>
 
             
