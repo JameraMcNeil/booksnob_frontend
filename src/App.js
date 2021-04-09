@@ -81,7 +81,7 @@ class App extends Component {
                   
                   <div>
               
-                    <div className = 'columns is-multi-line '>
+                    <div className = 'columns is-multiline '>
 
                       
                         {
