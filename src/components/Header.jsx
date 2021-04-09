@@ -4,9 +4,13 @@ class Header extends Component {
     render() {
         return(
             <div>
-                <header>
-                    <h1>Booksnob</h1>
-                </header>
+                <section className = 'hero is-link'>
+                    <div className = 'hero-body'>
+                        <header>
+                            <h1 class = 'title'>Booksnob</h1>
+                        </header>
+                    </div>
+                </section>
             </div>
         )
     }
