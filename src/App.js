@@ -72,20 +72,22 @@ class App extends Component {
           <BooktubeList />
         </aside>
         <br/>
-        <h2>Book Recommendations</h2>
-        <ul>
-          {
-            this.state.books.map((book, key) => {
-              return <li key = {key}> 
-              <img src = { book.img } alt = 'book covers'></img> <br/> 
-              { book.description } 
-              <br/>
-              <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
-              <br/>
-              </li>
-            })
-          }
-        </ul>
+        <section>
+          <h2>Book Recommendations</h2>
+          <ul>
+            {
+              this.state.books.map((book, key) => {
+                return <li key = {key}> 
+                <img src = { book.img } alt = 'book covers'></img> <br/> 
+                { book.description } 
+                <br/>
+                <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
+                <br/>
+                </li>
+              })
+            }
+          </ul>
+        </section>
         <br/>
         <NYTbooks />
 

@@ -50,14 +50,28 @@ class NewForm extends Component {
     render () {
         return(
             <div>
-                <h2>Add Your Favorite Book</h2>
-                <form onSubmit = {this.handleSubmit}>
-                    <input type = 'text' name = 'img' id = 'img' onChange = {this.handleChange} placeholder = 'Add image' value = {this.state.img} />
-                    <label htmlFor = 'img'> Book Cover Image</label>
-                    <input type ='text' name = 'description' id = 'description' onChange = { this.handleChange } placeholder = 'Add description' value = { this. state. description } />
-                    <label htmlFor = 'description'>Description</label>
-                    <input type = 'submit' value = 'Add Book' />
-                </form>
+                <section>
+                    <div>
+                        <h2 className ='is-size-4'>Add Your Favorite Book</h2>
+                    </div>
+                    <div>
+                        <form onSubmit = {this.handleSubmit}>
+                            <label htmlFor = 'img' className = 'label'> Book Cover Image</label>
+                            <div className = 'control'>
+                                <input className ='input' type = 'text' name = 'img' id = 'img' onChange = {this.handleChange} placeholder = 'Add image' value = {this.state.img} />
+                            </div>
+                            <label htmlFor = 'description' className = 'label'>Description</label>
+                            <div className = 'control'>
+                                
+                                <textarea className='textarea' type ='text' name = 'description' id = 'description' onChange = { this.handleChange } placeholder = 'Add description' value = { this. state. description }></textarea>
+                            </div>
+                            <br/>
+                            <input className ='button is-link' type = 'submit' value = 'Add Book' />
+                        </form>
+                    </div>
+                    
+                </section>
+                
             </div>
         )
     };
