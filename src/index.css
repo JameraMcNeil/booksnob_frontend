@@ -14,8 +14,14 @@ code {
 
 ul {
   list-style-type: none;
+  
 }
 
 body {
   background-color: floralwhite;
+}
+
+li {
+  display: in-line;
+  float: left
 }

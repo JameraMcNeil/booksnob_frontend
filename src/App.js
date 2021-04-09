@@ -61,46 +61,64 @@ class App extends Component {
   render() {
     return (
       <div>
-      
-      <Header />
-      <br/>
+        <section className = 'section'>
+            <Header />
+            <br/>
 
-      <NewForm handleAddBooks = {this.handleAddBooks}/>
-  
-        <br/>
-        <aside>
-          <BooktubeList />
-        </aside>
-        <br/>
-        <section>
-          <div>
-            <div>
-              <h2 className = 'title is-4'>Book Recommendations</h2>
-            </div>
-            <div className = 'columns is-multi-line'>
-              <div className = 'column is-one-third'>
-                <ul>
-                  {
-                    this.state.books.map((book, key) => {
-                      return <li key = {key}> 
-                      <img src = { book.img } alt = 'book covers'></img> <br/> 
-                      { book.description } 
-                      <br/>
-                      <button onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
-                      <br/>
-                      </li>
-                    })
-                  }
-                </ul>
-              </div>
+            <NewForm handleAddBooks = {this.handleAddBooks}/>
+        
+              <br/>
+              <aside>
+                <BooktubeList />
+              </aside>
+              <br/>
+              <section>
+                <div>
+                  <div>
+                    <h2 className = 'title is-4'>Book Recommendations</h2>
+                    <br/>
+                  </div>
+                  
+                  <div>
               
-            </div>
-            
-          </div>
-          
+                    <div className = 'columns is-multi-line '>
+
+                      
+                        {
+                          this.state.books.map((book, key) => {
+                            return (
+                              <div key = {key} className = 'column is-one-third'>
+                                <figure >
+                                  <img src = { book.img } alt = 'book covers'></img>
+                                </figure>
+                                <br/> 
+                                <div>
+                                  <p className = 'subtitle'>
+                                    { book.description } 
+                                  </p>
+                                </div>
+                                
+                            
+                                <br/>
+                                <button className = 'button' onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
+                                <br/>
+                              </div>
+                            )
+
+                          })
+                        }
+                      
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              
+            </section>
+            <br/>
+            <NYTbooks />
         </section>
-        <br/>
-        <NYTbooks />
+    
 
       </div>
     )
