@@ -67,10 +67,10 @@ class App extends Component {
 
             <NewForm handleAddBooks = {this.handleAddBooks}/>
         
-              <br/>
+              {/* <br/>
               <aside>
                 <BooktubeList />
-              </aside>
+              </aside> */}
               <br/>
               <section>
                 <div>
@@ -115,6 +115,10 @@ class App extends Component {
                 </div>
               
             </section>
+            <br/>
+              <aside>
+                <BooktubeList />
+              </aside>
             <br/>
             <NYTbooks />
         </section>

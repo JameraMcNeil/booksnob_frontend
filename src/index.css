@@ -25,3 +25,7 @@ li {
   display: in-line;
   float: left
 }
+
+.playlist {
+  padding: 0px, 0px, 0px, 100px
+}
