@@ -3,6 +3,7 @@ import NewForm from './components/NewForm'
 import BooktubeList from './components/BooktubeList'
 import NYTbooks from './components/NYTbooks'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 let baseURL = ''
 
@@ -62,15 +63,11 @@ class App extends Component {
     return (
       <div>
         <Header />
-            <br/>
+
         <section className = 'section'>
 
             <NewForm handleAddBooks = {this.handleAddBooks}/>
         
-              {/* <br/>
-              <aside>
-                <BooktubeList />
-              </aside> */}
               <br/>
               <section>
                 <div>
@@ -123,7 +120,7 @@ class App extends Component {
             <NYTbooks />
         </section>
     
-
+        < Footer />
       </div>
     )
   }
