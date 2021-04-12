@@ -61,9 +61,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <section className = 'section'>
-            <Header />
+        <Header />
             <br/>
+        <section className = 'section'>
 
             <NewForm handleAddBooks = {this.handleAddBooks}/>
         
