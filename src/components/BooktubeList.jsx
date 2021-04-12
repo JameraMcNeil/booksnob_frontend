@@ -29,7 +29,7 @@ class BooktubeList extends Component {
                             <div className = 'box'>
                                 <p className = 'title is-4'>Booktube Playlist</p>
                                 <figure className = 'playlist'>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9RKsevtnhdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UBeYlCuGbf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </figure>
                             </div>
                         </div>
