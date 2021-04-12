@@ -58,7 +58,7 @@ class NewForm extends Component {
                         <form onSubmit = {this.handleSubmit}>
                             <label htmlFor = 'img' className = 'label'> Book Cover Image</label>
                             <div className = 'control'>
-                                <input className ='input' type = 'text' name = 'img' id = 'img' onChange = {this.handleChange} placeholder = 'Add image' value = {this.state.img} />
+                                <input className ='input' size ='5' type = 'text' name = 'img' id = 'img' onChange = {this.handleChange} placeholder = 'Add image' value = {this.state.img} />
                             </div>
                             <label htmlFor = 'description' className = 'label'>Description</label>
                             <div className = 'control'>

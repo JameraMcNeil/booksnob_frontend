@@ -75,7 +75,7 @@ class App extends Component {
               <section>
                 <div>
                   <div>
-                    <h2 className = 'title is-4'>Book Recommendations</h2>
+                    <h2 className = 'notification is-link title is-3'>Book Recommendations</h2>
                     <br/>
                   </div>
                   
@@ -100,7 +100,7 @@ class App extends Component {
                                 
                             
                                 <br/>
-                                <button className = 'button' onClick ={() => this.deleteBook(book._id)}>DELETE BOOK</button>
+                                <button className = 'button' onClick ={() => this.deleteBook(book._id)}>Remove Book</button>
                                 <br/>
                               </div>
                             )

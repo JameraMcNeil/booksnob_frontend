@@ -7,7 +7,7 @@ class Header extends Component {
                 <section className = 'hero is-link'>
                     <div className = 'hero-body'>
                         <header>
-                            <h1 class = 'title'>Booksnob</h1>
+                            <h1 class = 'title is-1'>Booksnob</h1>
                         </header>
                     </div>
                 </section>

@@ -30,7 +30,7 @@ class NYTbooks extends Component {
             <div>
                 <section>
                     <div>
-                        <h2 className = 'title is-4'>New York Times Bestsellers List</h2>
+                        <h2 className = 'notification is-link title is-3'>New York Times Bestsellers List</h2>
                     </div>
                     <br/>
                     <div className = 'columns is-multiline'>
