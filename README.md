@@ -1,5 +1,25 @@
 # Overview
 
+Booksnob is a responsive web application that allows book-lovers to browse and add their favorite books. Users can also view a list of popular Booktube accounts and preview a Booktube playlist I created. Users can also browse a full list of the New York Times Bestsellers List.
+
+View the full application here: https://secure-waters-22892.herokuapp.com/
+
+# Technologies Used
+- HTML
+- CSS
+- Javascript
+- Node.js
+- MongoDB
+- Express
+- React
+- VS Code
+- Bulma
+
+# Future Development
+
+- customize styling in Bulma
+- make it so people can share their book recommendations
+- add about modal
 
 # User Stories
 
