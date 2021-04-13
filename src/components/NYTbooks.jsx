@@ -6,7 +6,6 @@ class NYTbooks extends Component {
         this.state = {
             books: []
         }
-        // this.getBestsellers = this.getBestsellers.bind(this)
     }
 
     componentDidMount() {
@@ -24,8 +23,6 @@ class NYTbooks extends Component {
 
 
     render() {
-        // this.getBestsellers()
-        // console.log(process.env.REACT_APP_BOOKS_API_KEY)
         return(
             <div>
                 <section>
